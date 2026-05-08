@@ -1,9 +1,9 @@
-#teste geral (giovanna) davi testar nesse
+
 disponiveis = {}
 doadores = {}
 resultados = {}
 
-#FILTROS (GIOVANNA):
+
 def filtro1(disponiveis):
     resultados=disponiveis
     print("Inicializando a busca personalizada...\nPara pular o(s) filtro(s) fornecido(s), apenas pressione 'Enter': ")
@@ -48,14 +48,8 @@ def filtro4(resultados):
             print("O filtro de temperamento não foi aplicado.")
         else:
             resultados = {nome: detalhes for nome, detalhes in resultados.items() if detalhes['temperamento'] == tempselecionado}
-        resultadopesquisa(resultados)
-
-#RESULTADOS DA PESQUISA:
-#def resultadopesquisa(resultados):
-
-
-
-#CADASTRO DO DOADOR (ANTONIO):
+        resultadopesquisa(resultados):
+    
 def cadastrodoador(nomedoador):
   while True:
      teldoador = input("Informe o seu número de celular, com DDD, na forma 11987654321: ")
@@ -67,13 +61,12 @@ def cadastrodoador(nomedoador):
          else:
              localdoador = str(input("Qual a capital mais próxima da cidade onde você está localizado? "))  # precisa verificar se o nome da cidade ta no dicionario do Davi (usar if)
          doadores[nomedoador] = {"telefone": teldoador, "e-mail": emaildoador, "localizacao": localdoador}
-         print(doadores)  # é para tirar dps, só coloquei pra testar
+         print(doadores) 
          print("Seus dados foram cadastrados com sucesso. Prosseguindo com o cadastro do cão...")
          cadastrocao1()
      else:
       print("Número de telefone inválido. Tente novamente.")
 
-#CADASTRO DO CÃO, TUDO ESTÁ EM ORDEM DE EXECUÇÃO DO PROGRAMA (ANTONIO):
 def cadastrocao1():
   nome=str(input("Qual o nome do cão? "))
   while True:
@@ -113,7 +106,7 @@ def pesocao(nome,sexo,porte,idade,raca):
       tempcao(nome,sexo,porte,idade,raca,peso)
 
 
-def tempcao(nome,sexo,porte,idade,raca,peso): #se pa q tem que complementar mais
+def tempcao(nome,sexo,porte,idade,raca,peso): 
   while True:
     temp=int(input("Em uma escala de 0 a 10, sendo 0 completamente dócil e 10 extremamente agressivo, como seria classificado o temperamento do seu cão? "))
     if temp>10 or temp<0:
